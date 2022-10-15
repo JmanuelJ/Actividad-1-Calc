@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvNumber1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="80dp"
+        android:text="@string/app_number1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNumber1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/app_number1"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@+id/tvNumber1"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvNumber2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:text="@string/app_number2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumber1"/>
+
+    <EditText
+        android:id="@+id/etNumber2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginStart="20dp"
+        android:hint="@string/app_number2"
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toRightOf="@+id/tvNumber2"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/app_button_call"
+        android:layout_marginStart="140dp"
+        android:onClick="calcular"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumber2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRe"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/app_result"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalc" />
+    <TextView
+        android:id="@+id/tvResul"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/teal_200"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRe" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Practica Uno</string>
+    <string name="app_number1">Numero 1</string>
+    <string name="app_number2">Numero 2</string>
+    <string name="app_button_call">Calcular</string>
+    <string name="app_result">Resultado</string>
+</resources>

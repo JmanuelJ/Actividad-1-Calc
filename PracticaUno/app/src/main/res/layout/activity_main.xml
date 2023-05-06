@@ -6,15 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        style="@style/Widget.Material3.SideSheet"
+        android:id="@+id/linLa"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/seed"
+        android:orientation="vertical"
+        app:layout_behavior = "com.gogle.sidesheet.SiderSheetBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/md_theme_light_onError"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="10dp"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tvNumber1"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:layout_marginStart="80dp"
         android:text="@string/app_number1"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linLa"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -22,7 +43,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:hint="@string/app_number1"
         android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@+id/tvNumber1"
@@ -42,7 +63,7 @@
         android:id="@+id/etNumber2"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="145dp"
         android:layout_marginStart="20dp"
         android:hint="@string/app_number2"
         android:inputType="numberDecimal"
@@ -74,11 +95,22 @@
     <TextView
         android:id="@+id/tvResul"
         android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_height="320dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
-        android:background="@color/teal_200"
-        android:textColor="@color/white"
+        android:background="@color/md_theme_dark_onSurfaceVariant"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRe" />
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_button_reset"
+        android:layout_marginStart="140dp"
+        android:onClick="reset"
+        app:layout_constraintTop_toBottomOf="@+id/tvResul"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

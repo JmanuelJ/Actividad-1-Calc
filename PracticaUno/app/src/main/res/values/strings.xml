@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Practica Uno</string>
+    <string name="app_name">Calculadora</string>
     <string name="app_number1">Numero 1</string>
     <string name="app_number2">Numero 2</string>
     <string name="app_button_call">Calcular</string>
+    <string name="app_button_reset">Reset</string>
     <string name="app_result">Resultado:</string>
     <string name="calc_result"> \n Suma: %1$d \n Resta: %2$d\n Multi: %3$d\n Div: %4$.2f</string>
 </resources>
